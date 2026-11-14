@@ -19,6 +19,12 @@
     font-weight: 700;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Inter-XBold';
+    src: url('../fonts/Inter_18pt-ExtraBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 
 /* themes colors variables */
