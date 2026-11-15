@@ -1,131 +1,158 @@
 /* Font Family */
 @font-face {
-    font-family: 'Inter-Regular';
-    src: url('../fonts/Inter_18pt-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter_18pt-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter-Medium';
-    src: url('../fonts/Inter_18pt-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Inter-Medium";
+  src: url("../fonts/Inter_18pt-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter-Bold';
-    src: url('../fonts/Inter_18pt-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Inter-Bold";
+  src: url("../fonts/Inter_18pt-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Inter-XBold';
-    src: url('../fonts/Inter_18pt-ExtraBold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Inter-XBold";
+  src: url("../fonts/Inter_18pt-ExtraBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
-
 
 /* themes colors variables */
 :root {
+  /* Background Colors */
+  --bg-primary: #080d1b;
+  --bg-secondary: #111a30;
+  --bg-card: #16213a;
 
-    /* Background Colors */
-    --bg-primary: #080D1B;
-    --bg-secondary: #111A30;
-    --bg-card: #16213A;
+  /* glass colors  */
+  --glass-radial-top: rgba(210, 220, 255, 0.35);
+  --glass-radial-buttem: rgba(180, 210, 255, 0.3);
+  --glass-gradient-one: rgba(255, 255, 255, 0.12);
+  --glass-gradient-two: rgba(20, 20, 80, 0.25);
+  --glass-border: rgba(230, 235, 255, 0.65);
+  --glass-shadow-one: rgba(255, 255, 255, 0.12);
+  --glass-shadow-two: rgba(150, 170, 255, 0.12);
 
-    /* Text Colors */
-    --text-primary: #FFFFFF;
-    --text-secondary: #A8B3C7;
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a8b3c7;
 
-    /* Accent Colors */
-    --color-primary: #2563EB;
-    --color-secondary: #7654F6;
+  /* Accent Colors */
+  --color-primary: #2563eb;
+  --color-secondary: #4318dd;
 
-    /* Border */
-    --border-color: #26334D;
+  /* Border */
+  --border-color: #26334d;
+  --border-color-sec: #bcddff;
 }
 [data-theme="light"] {
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #dfdfdf;
+  --bg-card: #2ff5eb;
 
-    /* Background Colors */
-    --bg-primary: #FFFFFF;
-    --bg-secondary:#dfdfdf;
-    --bg-card: #2ff5eb;
+  /* glass colors  */
+  --glass-radial-top: rgba(210, 220, 255, 0.35);
+  --glass-radial-buttem: rgba(180, 210, 255, 0.3);
+  --glass-gradient-one: rgba(255, 255, 255, 0.12);
+  --glass-gradient-two: rgba(20, 20, 80, 0.25);
+  --glass-border: rgba(230, 235, 255, 0.65);
+  --glass-shadow-one: rgba(255, 255, 255, 0.12);
+  --glass-shadow-two: rgba(150, 170, 255, 0.12);
 
-    /* Text Colors */
-    --text-primary: #111827;
-    --text-secondary: #64748B;
+  /* Text Colors */
+  --text-primary: #111827;
+  --text-secondary: #64748b;
 
-    /* Accent Colors */
-    --color-primary: #2563EB;
-    --color-secondary: #50bdfc;
+  /* Accent Colors */
+  --color-primary: #2563eb;
+  --color-secondary: #50bdfc;
 
-    /* Border */
-    --border-color: #E2E8F0;
-    /* Effects */
-    --transition-default: 0.5s ease;
-    --border-radius: 12px;
+  /* Border */
+  --border-color: #e2e8f0;
+  --border-color-sec: #86b1dd;
 }
 
 /* Common Styles */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-secondary);
-    font-family: 'Inter-Regular', sans-serif;
-    font-size: 16px;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
 }
-h1, h2, h3, h4, h5, h6,
-strong,span, b {
-    font-family: 'Inter-Bold', sans-serif;
-    color: var(--text-primary);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+span,
+b {
+  font-family: "Inter-Bold", sans-serif;
+  color: var(--text-primary);
 }
 .card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
 }
 
 p {
-    color: var(--text-secondary);
-    line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-.bg-pr{
-    background-color: var(--bg-primary);
+.bg-pr {
+  background-color: var(--bg-primary);
 }
-.bg-sec{
-     background-color: var(--bg-secondary);
-      
+.bg-sec {
+  background-color: var(--bg-secondary);
 }
 .btn-main {
-    background-color: var(--color-primary);
-    border: 1px solid var(--color-secondary);
-    border-radius: var(--border-radius);
+  color: var(--text-primary);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  border: 2px solid var(--border-color-sec) !important;
+  border-radius: 10px;
 }
-.font-mid{
-        font-family: 'Inter-Medium', sans-serif;
+.font-mid {
+  font-family: "Inter-Medium", sans-serif;
 }
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 button,
 input,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 ::selection {
-    background-color: var(--color-primary);
-    color: #FFFFFF;
+  background-color: var(--color-primary);
+  color: #ffffff;
 }
 
-:focus-visible ,:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 3px;
+:focus-visible,
+:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
