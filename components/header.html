@@ -1,32 +1,20 @@
 <header class="container-fluid row justify-content-center align-items-center">
   <div class="container head-container glass-box">
     <div class="row align-items-center justify-content-between">
-      <div class="row justify-content-center align-items-center col-lg-4">
+      <div class="row justify-content-center align-items-center col-5 col-lg-3">
         <img
-          class="col-6 head-logo"
+          class="head-logo"
           src="./assets/images/profile/sara-logo.png"
           alt="sara logo"
         />
-        <span class="col-6"
+        <span class="w-25"
           >Sara
           <span>Azimi</span>
         </span>
       </div>
 
-      <div class="row justify-content-center align-items-center col-lg-4">
-        <nav class="navbar navbar-expand-lg">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainMenu"
-            aria-controls="mainMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
+      <div class="row justify-content-start align-items-center col-2 col-lg-5">
+        <nav class="navbar navbar-expand-lg w-75">
           <div class="collapse navbar-collapse" id="mainMenu">
             <ul class="navbar-nav head-nav">
               <li class="nav-item head-item">
@@ -48,25 +36,28 @@
         </nav>
       </div>
 
-      <div class="row justify-content-center align-items-center col-lg-4">
-        <div class="d-lg-flex col-lg-6 justify-content-end align-items-center">
-          <button
-            class="theme-toggle w-50"
-            type="button"
-            aria-label="Toggle theme"
-          >
-            <i class="fa-solid fa-sun"></i>
-            <i class="fa-solid fa-moon"></i>
-          </button>
-        </div>
-        <div
-          class="d-none d-lg-flex col-lg-6 justify-content-center align-items-center"
+      <div
+        class="row justify-content-end justify-content-lg-around align-items-center col-5 col-lg-4"
+      >
+        <button
+          class="theme-toggle d-flex d-md-none d-lg-flex m-auto"
+          type="button"
+          aria-label="Toggle theme"
         >
-          <button class="btn-main head-btn w-100">
-            Let's talk
-            <i class="fa-solid fa-message"></i>
-          </button>
-        </div>
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="btn-main head-btn d-none d-lg-inline-block w-50">
+          Send DM
+          <i class="fa-solid fa-message"></i>
+        </button>
+
+        <button
+          class="btn-main head-btn menu-bars d-inline-block d-lg-none w-25"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
   </div>
