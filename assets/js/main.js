@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       document.getElementById("header").innerHTML = data;
       setActiveLink();
+      themeSwitch();
     });
 });
 // function for activate links in header
@@ -19,5 +20,19 @@ function setActiveLink() {
       link.classList.add("active");
       link.setAttribute("aria-current", "page");
     }
+  });
+}
+// function for theme switch
+function themeSwitch() {
+  const themeButton = document.querySelector(".theme-toggle");
+  console.log(themeButton);
+  themeButton.addEventListener("click", () => {
+    let dTheme = document.documentElement.getAttribute("data-theme");
+    if (dTheme === "dark") {
+      dTheme = "light";
+    } else if (dTheme === "light") {
+      dTheme = "dark";
+    }
+    document.documentElement.setAttribute("data-theme", dTheme);
   });
 }

@@ -38,6 +38,7 @@ header {
 .theme-toggle {
   width: fit-content;
   display: flex;
+   position: relative;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -47,18 +48,30 @@ header {
   padding: 6px;
   border: none;
   border-radius: 50px;
-
-  background-color: var(--secondary-bg);
+  background-color: transparent;
   color: var(--text-color);
 
   cursor: pointer;
   border: 1px solid var(--border-color);
 }
-
+.theme-background {
+    background-color: var(--color-secondary);
+    border:1px solid #FFFF;
+    border-radius:50%;
+    position: absolute;
+    z-index: 0;
+    transform: translateX(50%);
+    transition: transform 0.5s ease;
+}
+[data-theme="light"] .theme-background {
+    transform: translateX(-50%);
+}
 .theme-toggle i {
   width: 36px;
   height: 36px;
 
+   position: relative;
+    z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
