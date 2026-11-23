@@ -1,3 +1,4 @@
+// header part
 // loading header in webpages after loading DOM
 document.addEventListener("DOMContentLoaded", () => {
   fetch("./components/header.html")
@@ -72,3 +73,12 @@ function closeSidebar() {
   closebut.addEventListener("click", clsSide);
   BD.addEventListener("click", clsSide);
 }
+// end of header part
+// footer part
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("./components/footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("footer").innerHTML = data;
+    });
+});

@@ -50,6 +50,12 @@
   --color-primary: #2563eb;
   --color-secondary: #4318dd;
 
+  --primary-purple: #8256FD;
+    --purple-dark: #6A47FD;
+    --purple-light: #A78BFA;
+    --purple-glow: rgba(130, 86, 253, 0.35);
+
+
   /* Border */
   --border-color: #26334d;
   --border-color-sec: #bcddff;
@@ -58,7 +64,7 @@
   /* Background Colors */
   --bg-primary: #ffffff;
   --bg-secondary: #dfdfdf;
-  --bg-card: #2ff5eb;
+  --bg-card: #2fd4f5;
 
   /* glass colors  */
   --glass-radial-top: rgba(210, 220, 255, 0.35);
@@ -77,10 +83,17 @@
   --color-primary: #2563eb;
   --color-secondary: #50bdfc;
 
+  --primary-purple: #8256FD;
+    --purple-dark: #6A47FD;
+    --purple-light: #A78BFA;
+    --purple-glow: rgba(130, 86, 253, 0.35);
+
+
   /* Border */
   --border-color: #a3a3a3;
   --border-color-sec: #86b1dd;
-}
+
+  }
 
 /* Common Styles */
 * {
@@ -126,6 +139,7 @@ a {
   background-color: var(--bg-secondary);
 }
 .btn-main {
+  text-align: center;
   color: var(--text-primary);
   background: linear-gradient(
     135deg,
