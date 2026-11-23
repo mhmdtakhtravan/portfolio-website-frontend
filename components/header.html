@@ -14,7 +14,7 @@
       </div>
 
       <div class="row justify-content-start align-items-center col-2 col-lg-5">
-        <nav class="navbar navbar-expand-lg w-75">
+        <nav class="navbar navbar-expand-lg w-75 deckstop-menu">
           <div class="collapse navbar-collapse" id="mainMenu">
             <ul class="navbar-nav head-nav">
               <li class="nav-item head-item">
@@ -40,11 +40,11 @@
         class="row justify-content-end justify-content-lg-around align-items-center col-5 col-lg-4"
       >
         <button
-          class="theme-toggle d-flex d-md-none d-lg-flex m-auto"
+          class="theme-toggle d-flex m-auto"
           type="button"
           aria-label="Toggle theme"
         >
-         <span class="theme-background w-50 h-100"></span>
+          <span class="theme-background w-50 h-100"></span>
 
           <i class="fa-solid fa-sun"></i>
           <i class="fa-solid fa-moon"></i>
@@ -56,7 +56,8 @@
         </button>
 
         <button
-          class="btn-main head-btn menu-bars d-inline-block d-lg-none w-25"
+          class="btn-main head-btn menu-bars d-inline-block d-lg-none w-25 menu-openner"
+          aria-expanded="false"
         >
           <i class="fa-solid fa-bars"></i>
         </button>

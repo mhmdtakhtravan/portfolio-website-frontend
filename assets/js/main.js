@@ -4,8 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("header").innerHTML = data;
+      copyMenuSidebar();
       setActiveLink();
       themeSwitch();
+      mobileNavigation();
+      closeSidebar();
     });
 });
 // function for activate links in header
@@ -25,7 +28,6 @@ function setActiveLink() {
 // function for theme switch
 function themeSwitch() {
   const themeButton = document.querySelector(".theme-toggle");
-  console.log(themeButton);
   themeButton.addEventListener("click", () => {
     let dTheme = document.documentElement.getAttribute("data-theme");
     if (dTheme === "dark") {
@@ -35,4 +37,38 @@ function themeSwitch() {
     }
     document.documentElement.setAttribute("data-theme", dTheme);
   });
+}
+// function for menu opening mobile
+function opensidebar() {
+  const barButton = document.querySelector(".menu-openner");
+  let menuState = barButton.getAttribute("aria-expanded");
+  menuState = "true";
+  barButton.setAttribute("aria-expanded", menuState);
+}
+function copyMenuSidebar() {
+  const desktopMenu = document.getElementById("mainMenu");
+  const mobileSidebar = document.querySelector(".mobile-navigation");
+
+  mobileSidebar.innerHTML = desktopMenu.innerHTML;
+}
+
+function mobileNavigation() {
+  const barButton = document.querySelector(".menu-openner");
+  barButton.addEventListener("click", () => {
+    opensidebar();
+  });
+}
+// function for close backdrop
+const clsSide = () => {
+  const barButton = document.querySelector(".menu-openner");
+  let menuState = barButton.getAttribute("aria-expanded");
+  menuState = "false";
+  barButton.setAttribute("aria-expanded", menuState);
+};
+
+function closeSidebar() {
+  const closebut = document.querySelector(".close-butten");
+  const BD = document.querySelector(".backdrop");
+  closebut.addEventListener("click", clsSide);
+  BD.addEventListener("click", clsSide);
 }
